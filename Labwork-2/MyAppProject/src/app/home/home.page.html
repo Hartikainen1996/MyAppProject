@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Eemil's Ionic 4 Components!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="action-sheets-basic-page">
+  <div class="ion-padding">
+    <button ion-button block (click)="openMenu()">
+      Click here to show action sheet!
+    </button>
+    <br />
+    <br />
+    <ion-list>
+      <ion-list-header><h1>Ion-checkbox</h1></ion-list-header>
+      <ion-item *ngFor="let entry of form">
+        <ion-label>{{entry.val}}</ion-label>
+        <ion-checkbox
+          color="secondary"
+          slot="end"
+          [(ngModel)]="entry.isChecked"
+        ></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header><h1>Ion-select</h1></ion-list-header>
+
+      <ion-item>
+        <ion-label>Toppings</ion-label>
+        <ion-select multiple="true" cancelText="No!" okText="Yes!">
+          <ion-select-option value="bacon">Bacon</ion-select-option>
+          <ion-select-option value="olives">Black Olives</ion-select-option>
+          <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
+          <ion-select-option value="peppers">Green Peppers</ion-select-option>
+          <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
+          <ion-select-option value="onions">Onions</ion-select-option>
+          <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+          <ion-select-option value="pineapple">Pineapple</ion-select-option>
+          <ion-select-option value="sausage">Sausage</ion-select-option>
+          <ion-select-option value="Spinach">Spinach</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pets</ion-label>
+        <ion-select multiple="true">
+          <ion-select-option value="bird">Bunny</ion-select-option>
+          <ion-select-option value="cat">Cat</ion-select-option>
+          <ion-select-option value="dog">Dog</ion-select-option>
+          <ion-select-option value="fish">Fish</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
